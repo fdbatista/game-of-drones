@@ -21,6 +21,6 @@ html {
     background-color: #414765;
 }
 
-.pit {
-    background-image: url(../img/fighting_pit.jpg);
+.handCursor {
+    cursor: pointer;
 }

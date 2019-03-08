@@ -1,0 +1,14 @@
+﻿.default {
+    background-color: #414765;
+}
+
+button {
+    border-radius: 0 !important;
+    background-color: #414765!important;
+}
+
+.bordered {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+}

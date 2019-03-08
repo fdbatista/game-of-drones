@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones", "GameOfDrones\GameOfDrones.csproj", "{525067B3-A658-45A2-BC78-4CB1756DCFED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfDrones", "GameOfDrones\GameOfDrones.csproj", "{525067B3-A658-45A2-BC78-4CB1756DCFED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Tests", "GameOfDrones.Tests\GameOfDrones.Tests.csproj", "{C0A9C46F-DFB4-47FE-B9AC-145E4E01DD79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{525067B3-A658-45A2-BC78-4CB1756DCFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{525067B3-A658-45A2-BC78-4CB1756DCFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{525067B3-A658-45A2-BC78-4CB1756DCFED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A9C46F-DFB4-47FE-B9AC-145E4E01DD79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A9C46F-DFB4-47FE-B9AC-145E4E01DD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A9C46F-DFB4-47FE-B9AC-145E4E01DD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A9C46F-DFB4-47FE-B9AC-145E4E01DD79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

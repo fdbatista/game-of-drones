@@ -1,0 +1,14 @@
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\GameOfDrones.Tests.deps.json
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\GameOfDrones.Tests.runtimeconfig.json
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\GameOfDrones.Tests.runtimeconfig.dev.json
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\GameOfDrones.Tests.dll
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\bin\Debug\netcoreapp2.2\GameOfDrones.Tests.pdb
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.csprojAssemblyReference.cache
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.csproj.CoreCompileInputs.cache
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.AssemblyInfoInputs.cache
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.AssemblyInfo.cs
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.dll
+V:\dotnet\GameOfDrones\GameOfDrones.Tests\obj\Debug\netcoreapp2.2\GameOfDrones.Tests.pdb

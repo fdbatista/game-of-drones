@@ -1,0 +1,15 @@
+﻿.default {
+    background-color: #414765;
+}
+
+.linkBtn {
+    height: 70px!important;
+}
+
+.linkBtn:hover {
+    border: 1px solid #ccc!important;
+}
+
+.pit {
+    background-image: url(../assets/img/fighting_pit.jpg);
+}
