@@ -19,3 +19,4 @@ INSTRUCTIONS
 
 
 Note: for the sake of simplicity, this exercise uses a hard-coded connection string with the database parameters.
+I couldn't spend enough time on this, so I had to skip unit tests. My apologies for that.
