@@ -18,4 +18,4 @@ INSTRUCTIONS
 - Run the solution on your preferred Web browser (F5).
 
 
-Note: for the sake of simplicity, this exercise uses a hard-coded connection string with the database parameters. Unfortunately, I wasn't able to spend enough time on it during this weekend, so I had to skip unit tests. My apologies for that.
+Note: for the sake of simplicity, this exercise uses a hard-coded connection string with the database parameters.
