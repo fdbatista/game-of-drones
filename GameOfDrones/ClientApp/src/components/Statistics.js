@@ -97,7 +97,7 @@ export class Statistics extends Component {
 
     render() {
         let contents = this.state.loading
-            ? <p className="mt-2"><Loading text="Loading data"></Loading></p>
+            ? <p className="mt-5"><Loading text="Loading data"></Loading></p>
             : this.renderWinnersTable(this.state.winners, this.state.pages);
 
         return (

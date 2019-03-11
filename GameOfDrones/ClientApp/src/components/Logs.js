@@ -56,7 +56,7 @@ export class Logs extends Component {
 
     render() {
         let contents = this.state.loading
-            ? <p className="mt-2"><Loading text="Loading data"></Loading></p>
+            ? <p className="mt-5"><Loading text="Loading data"></Loading></p>
             : this.renderItemsTable(this.state.items, this.state.pages);
 
         return (
