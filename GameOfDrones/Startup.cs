@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using GameOfDrones.Models;
+using Newtonsoft.Json;
 
 namespace GameOfDrones
 {
@@ -21,7 +22,10 @@ namespace GameOfDrones
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
             var connection = @"Server=(localdb)\mssqllocaldb;Database=GameOfDronesDB;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<GoDContext>
                 (options => options.UseSqlServer(connection));

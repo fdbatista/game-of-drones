@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Animated } from "react-animated-css";
 import { GameRounds } from "./GameRounds";
 import { GiCrestedHelmet } from 'react-icons/gi';
+import ironThroneImg from './../assets/img/iron_throne.png';
 
 export class NewGame extends Component {
     static displayName = NewGame.name;
 
     constructor(props) {
         super(props);
-        
         this.state = {
             players: [
-                { name: "", gameWinner: 0, roundsWon: 0 },
-                { name: "", gameWinner: 0, roundsWon: 0 }
+                { name: "" },
+                { name: "" }
             ],
-            winner: "",
+            winner: { name: "", rounds: 0 },
             gameStatus: 0
         };
 
@@ -47,13 +48,13 @@ export class NewGame extends Component {
     }
 
     getGameResults(results) {
-        console.clear();
-        console.log(results);
-        let players = Object.assign([], this.state.players);
-        players[results.gameWinnerIndex].gameWinner = 1;
-        players[results.gameWinnerIndex].roundsWon = results.rounds;
-        this.setState({ players });
-        this.setState({ gameStatus: 2 });
+        let winner = { name: this.state.players[results.gameWinnerIndex].name, rounds: results.rounds };
+        this.setState({ gameStatus: 2, winner: winner });
+        axios.post("api/god", { player: { Name: winner.name }, rounds: winner.rounds })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            });
     };
 
     render() {
@@ -79,8 +80,9 @@ export class NewGame extends Component {
                 visibleForm = 
                     <div className="row">
                         <div className="col-sm-12 text-center">
-                            <h5>We have a WINNER!</h5>
-                            <p>After {this.state.players[0].gameWinner === 1 ? this.state.players[0].roundsWon : this.state.players[1].roundsWon} rounds, <b>{this.state.players[0].gameWinner === 1 ? this.state.players[0].name : this.state.players[1].name}</b> has become the First of his/her Name!</p>
+                        <h5>We have a new Ruler of the Seven Kingdoms!</h5>
+                        <img src={ironThroneImg} alt="Iron Throne" className="img-responsive" />
+                            <p>After {this.state.winner.rounds} rounds, <b>{this.state.winner.name}</b> has seized the Iron Throne.</p>
                             <button className="btn btn-primary" onClick={this.restartGame}><GiCrestedHelmet size="1.3em" /> Try again</button>
                         </div>
                     </div>

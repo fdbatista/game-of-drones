@@ -38,6 +38,25 @@ namespace GameOfDrones.Migrations
                     b.ToTable("Games");
                 });
 
+            modelBuilder.Entity("GameOfDrones.Models.Log", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Datetime");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500);
+
+                    b.Property<int>("IsError");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logs");
+                });
+
             modelBuilder.Entity("GameOfDrones.Models.Player", b =>
                 {
                     b.Property<int>("Id")

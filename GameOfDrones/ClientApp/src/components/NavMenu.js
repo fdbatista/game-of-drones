@@ -4,15 +4,13 @@ import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLi
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 import 'element-theme-default';
+import { Animated } from "react-animated-css";
 import Sound from 'react-sound';
 import soundfile from './../assets/snd/got.mp3';
+import god_logo from './../assets/img/god_logo.png';
 
-import { GiCrossedSwords } from 'react-icons/gi';
-import { GiCauldron } from 'react-icons/gi';
-import { GiBrutalHelm } from 'react-icons/gi';
-import { GiCastle } from 'react-icons/gi';
-import { MdVolumeUp } from "react-icons/md";
-import { MdVolumeOff } from "react-icons/md";
+import { GiCastle, GiCrossedSwords, GiCauldron, GiCheckedShield } from "react-icons/gi";
+import { MdVolumeUp, MdVolumeOff,  } from "react-icons/md";
 
 export class NavMenu extends Component {
     static displayName = NavMenu.name;
@@ -42,6 +40,14 @@ export class NavMenu extends Component {
         );
     }
 
+    componentDidMount() {
+        this.setState(
+            {
+                playSound: true
+            }
+        );
+    }
+
     render() {
         let playSoundIcon;
         if (this.state.playSound) {
@@ -53,30 +59,36 @@ export class NavMenu extends Component {
         return (
             <header>
                 <Sound autoLoad={true} loop={true} url={soundfile} playStatus={this.state.playSound ? Sound.status.PLAYING : Sound.status.PAUSED} />
-                <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 navbar-dark dark">
-                    <Container>
-                        <NavbarBrand className="text-light" tag={Link} to="/">
-                            <GiBrutalHelm size="1.3em" /> Game of Drones
-                        </NavbarBrand>
-                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2 text-light" />
-                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-                            <ul className="navbar-nav flex-grow">
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-light" to="/"><GiCastle /> Home</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-light" to="/new-game"><GiCrossedSwords /> New Game</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-light" to="/statistics"><GiCauldron /> Statistics</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={this.toggleSound} className="text-light handCursor">{playSoundIcon}</NavLink>
-                                </NavItem>
-                            </ul>
-                        </Collapse>
-                    </Container>
-                </Navbar>
+
+                <Animated animationIn="slideInDown" animationOut="slideOutUp">
+                    <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 navbar-dark dark">
+                        <Container>
+                            <NavbarBrand className="text-light" tag={Link} to="/">
+                                <img src={god_logo} alt="Logo" />
+                            </NavbarBrand>
+                            <NavbarToggler onClick={this.toggleNavbar} className="mr-2 text-light" />
+                            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+                                <ul className="navbar-nav flex-grow">
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-light" to="/"><GiCastle /> Home</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-light" to="/new-game"><GiCrossedSwords /> New Game</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-light" to="/statistics"><GiCauldron /> Statistics</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-light" to="/logs"><GiCheckedShield /> Logs</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink onClick={this.toggleSound} className="text-light handCursor">{playSoundIcon}</NavLink>
+                                    </NavItem>
+                                </ul>
+                            </Collapse>
+                        </Container>
+                    </Navbar>
+                </Animated>
             </header>
         );
     }

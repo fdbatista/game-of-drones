@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameOfDrones.Migrations
 {
     [DbContext(typeof(GoDContext))]
-    [Migration("20190307184235_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190311064742_CreateDB")]
+    partial class CreateDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,25 @@ namespace GameOfDrones.Migrations
                     b.HasIndex("WinnerId");
 
                     b.ToTable("Games");
+                });
+
+            modelBuilder.Entity("GameOfDrones.Models.Log", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Datetime");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500);
+
+                    b.Property<int>("IsError");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logs");
                 });
 
             modelBuilder.Entity("GameOfDrones.Models.Player", b =>
