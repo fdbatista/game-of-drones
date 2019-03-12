@@ -13,6 +13,7 @@ INSTRUCTIONS
 --------------------------------
 - Open the solution with Visual Studio.
 - From the Package Manager Console (Tools > Nuget Package Manager > Package Manager Console), run the command <code>dotnet restore</code> to install project dependencies.
+- Navigate to the directory GameOfDrones/ClientApp and run <code>npm install</code> from the command console to ensure all dependencies get installed.
 - Once done, run the command <code>Update-Database</code> to apply database migrations via Entity Framework Core.
 - Compile the solution (Ctrl + Shift + B).
 - Run the solution on your preferred Web browser (F5).
